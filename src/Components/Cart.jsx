@@ -40,7 +40,7 @@ const Cart=({productsCart,dispatch})=>{
 
                 <div className="w-75 mx-auto d-flex justify-content-end">
 
-                    {productsCart.reduce((item,acc)=>acc+=item.prix*item.qte,0)}{" "}DH
+                  {productsCart.reduce((acc, item) => acc + item.prix * item.qte, 0)} DH
                     </div>
            </>
            
