@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({productsCart}) => {
   return (
     <nav className="navbar bg-dark navbar-dark">
       <div className="container">
@@ -15,8 +15,9 @@ const Navbar = () => {
             Produits
           </Link>
 
-          <Link className="nav-link mx-2" to="/cart">
+          <Link className="nav-link me-3 position-relative" to="/cart">
             Cart
+            <span className="badge bg-danger position-absolute top-0"> {productsCart.length} </span>
           </Link>
 
         </div>
